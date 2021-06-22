@@ -23,7 +23,9 @@ def on_message(client, userdata, message):
     Moist = new["Moisture"] 
     Date = timezone.now()
     Sensor = sensors(Temperature = Temp, Humidity = Humid, Moisturelvl = Moist, DataDate = Date)
+    print(Sensor)
     Sensor.save()
+    
 
 def showreadings(request):
     data = {"data":[]}
@@ -59,8 +61,6 @@ def homepage(request):
 client.loop_start()
 client.subscribe("Compostbin")
 client.on_message = on_message
-time.sleep(30)
-client.loop_stop
 
 #Create your views here.
 
