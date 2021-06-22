@@ -13,9 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
-import dj_database_url
 from decouple import config
-import urllib.parse
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -95,7 +93,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'IoTCompostBin',
+        'NAME': 'heroku_99388d27e6b294e',
         'HOST': 'us-cdbr-east-04.cleardb.com', 
         'USER': 'bf6f47e6920c38',
         'PASSWORD': '709c7aff',
