@@ -54,7 +54,7 @@ def control(request):
     return JsonResponse(data)
 
 def homepage(request):
-    return render(request, 'Homepage.html')
+    return render(request, 'home.html')
 
 client.loop_start()
 client.subscribe("Compostbin")
