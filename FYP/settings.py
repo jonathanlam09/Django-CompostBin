@@ -93,10 +93,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'uas77i0u37o41ba0',
+        'NAME': 'jl1cg3mzf2rmdx10',
         'HOST': 'lyn7gfxo996yjjco.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 
-        'USER': 'f3t1lmxt9buzdmzb',
-        'PASSWORD': 'bngtpxd5iabptl6l',
+        'USER': 'f12d18whn270l2ov',
+        'PASSWORD': 'kb6vc19eo0ge3v0c',
         'PORT': '3306',
         'TIME_ZONE': 'Asia/Kuala_Lumpur'
     }
