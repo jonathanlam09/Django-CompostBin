@@ -94,10 +94,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'heroku_19b4532eb040ae6',
+        'NAME': 'heroku_8ab87a1fdd5a247',
         'HOST': 'us-cdbr-east-04.cleardb.com', 
-        'USER': 'bb5ac4e994cc41',
-        'PASSWORD': 'a4cfb154',
+        'USER': 'be297fdebbac55',
+        'PASSWORD': '89e95daa',
         'PORT': '3306',
         'TIME_ZONE': 'Asia/Kuala_Lumpur',
         "OPTIONS": {'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1"
