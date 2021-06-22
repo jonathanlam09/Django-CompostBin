@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import django_heroku
 from decouple import config
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -89,30 +89,30 @@ WSGI_APPLICATION = 'FYP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         #'NAME': BASE_DIR / 'db.sqlite3',
-#         'NAME': 'heroku_00ed8508f02f14c',
-#         'HOST': 'us-cdbr-east-04.cleardb.com', 
-#         'USER': 'b37afa4b4a2e55',
-#         'PASSWORD': 'd3f6b32b',
-#         'PORT': '3306',
-#         'TIME_ZONE': 'Asia/Kuala_Lumpur'
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'fyp_sensors',
-        'HOST': '127.0.0.1', 
-        'USER': 'root',
-        'PASSWORD': 'Mysql0644961-',
+        'NAME': 'uas77i0u37o41ba0',
+        'HOST': 'lyn7gfxo996yjjco.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 
+        'USER': 'f3t1lmxt9buzdmzb',
+        'PASSWORD': 'bngtpxd5iabptl6l',
         'PORT': '3306',
         'TIME_ZONE': 'Asia/Kuala_Lumpur'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         #'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': 'fyp_sensors',
+#         'HOST': '127.0.0.1', 
+#         'USER': 'root',
+#         'PASSWORD': 'Mysql0644961-',
+#         'PORT': '3306',
+#         'TIME_ZONE': 'Asia/Kuala_Lumpur'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
