@@ -93,10 +93,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'heroku_99388d27e6b294e',
+        'NAME': 'heroku_00ed8508f02f14c',
         'HOST': 'us-cdbr-east-04.cleardb.com', 
-        'USER': 'bf6f47e6920c38',
-        'PASSWORD': '709c7aff',
+        'USER': 'b37afa4b4a2e55',
+        'PASSWORD': 'd3f6b32b',
         'PORT': '3306',
         'TIME_ZONE': 'Asia/Kuala_Lumpur'
     }
