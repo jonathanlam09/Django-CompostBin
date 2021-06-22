@@ -1,1 +1,1 @@
-web:gunicorn FYP.wsgi
+web:gunicorn FYP.wsgi runserver 0.0.0.0:8000
