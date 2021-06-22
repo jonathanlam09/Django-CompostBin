@@ -93,12 +93,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'myqdqklv0zprviyy',
-        'HOST': 'lyn7gfxo996yjjco.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 
-        'USER': 'q65qmkm2ruhloe64',
-        'PASSWORD': 'zrsli4ltiq9ot2q9',
+        'NAME': 'heroku_19b4532eb040ae6',
+        'HOST': 'us-cdbr-east-04.cleardb.com', 
+        'USER': 'bb5ac4e994cc41',
+        'PASSWORD': 'a4cfb154',
         'PORT': '3306',
-        'TIME_ZONE': 'Asia/Kuala_Lumpur'
+        'TIME_ZONE': 'Asia/Kuala_Lumpur',
+        "OPTIONS": {'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1"
+        }
     }
 }
 # DATABASES = {
