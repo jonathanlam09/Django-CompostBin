@@ -10,10 +10,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 import paho.mqtt.publish as mqttpublish
 
-mqttBroker = "broker.hivemq.com"
-client=mqtt.Client("Testing")
-client.connect(mqttBroker)
-
 def on_message(client, userdata, message):
     _decode = str(message.payload.decode("utf-8"))
     new = json.loads(_decode)
@@ -26,7 +22,6 @@ def on_message(client, userdata, message):
     print(Sensor)
     Sensor.save()
     
-
 def showreadings(request):
     data = {"data":[]}
     if request.method == 'GET':
@@ -58,9 +53,15 @@ def control(request):
 def homepage(request):
     return render(request, 'home.html')
 
+mqttBroker = "broker.hivemq.com"
+client=mqtt.Client("Testing")
+client.connect(mqttBroker)
+
 client.loop_start()
 client.subscribe("Compostbin")
 client.on_message = on_message
+client.loop_read()
+
 
 #Create your views here.
 
