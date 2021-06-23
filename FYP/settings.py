@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
-import dj_database_url
-from decouple import config
+# import django_heroku
+# import dj_database_url
+# from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -90,33 +90,32 @@ WSGI_APPLICATION = 'FYP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        #'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'heroku_8ab87a1fdd5a247',
-        'HOST': 'us-cdbr-east-04.cleardb.com', 
-        'USER': 'be297fdebbac55',
-        'PASSWORD': '89e95daa',
-        'PORT': '3306',
-        'TIME_ZONE': 'Asia/Kuala_Lumpur',
-        "OPTIONS": {'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1"
-        }
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
 #         #'NAME': BASE_DIR / 'db.sqlite3',
-#         'NAME': 'fyp_sensors',
-#         'HOST': '127.0.0.1', 
-#         'USER': 'root',
-#         'PASSWORD': 'Mysql0644961-',
+#         'NAME': 'heroku_8ab87a1fdd5a247',
+#         'HOST': 'us-cdbr-east-04.cleardb.com', 
+#         'USER': 'be297fdebbac55',
+#         'PASSWORD': '89e95daa',
 #         'PORT': '3306',
-#         'TIME_ZONE': 'Asia/Kuala_Lumpur'
+#         'TIME_ZONE': 'Asia/Kuala_Lumpur',
+#         "OPTIONS": {'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1"
+#         }
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'fyp_sensors',
+        'HOST': '127.0.0.1', 
+        'USER': 'root',
+        'PASSWORD': 'Mysql0644961-',
+        'PORT': '3306',
+        'TIME_ZONE': 'Asia/Kuala_Lumpur'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -160,10 +159,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
