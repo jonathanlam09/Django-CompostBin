@@ -56,12 +56,10 @@ def homepage(request):
 mqttBroker = "broker.hivemq.com"
 client=mqtt.Client("Testing")
 client.connect(mqttBroker)
-
-client.loop_start()
-client.subscribe("Compostbin")
 client.on_message = on_message
+client.subscribe("Compostbin")
+client.loop_start()
 client.loop_read()
-
 
 #Create your views here.
 

@@ -84,6 +84,35 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+div.Compostbtn{
+  display: flex;
+  justify-content: center;
+}
+
+button.SVC:hover {
+  letter-spacing: 0.3em;
+  background-color: lightskyblue;
+  box-shadow: 0 5px 15px rgb(68, 122, 184);
+}
+
+button.SVC {
+  color: white;
+  cursor: pointer;
+  height: 4em;
+  width: 10%;
+  padding: 1.5em auto;
+  margin: 1em auto;
+  background-color: lightskyblue;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  font-size: 12px;
+}
+
     
   .scroll-to-top {
     position: fixed;
