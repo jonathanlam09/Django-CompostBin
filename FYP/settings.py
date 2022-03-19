@@ -105,7 +105,7 @@ DATABASES = {
         'NAME': 'fyp_sensors',
         'HOST': '127.0.0.1', 
         'USER': 'root',
-        'PASSWORD': 'Mysql0644961-',
+        'PASSWORD': 'xxxx',
         'PORT': '3306',
         'TIME_ZONE': 'Asia/Kuala_Lumpur'
     }
